@@ -7,8 +7,6 @@ public class Pessoa{
     protected String dataNascimento;
     protected String registroGeral;
     protected String numeroCpf;
-
-
     protected String nomePai;
     protected String nomeMae;
 
