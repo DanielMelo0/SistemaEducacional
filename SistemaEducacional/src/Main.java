@@ -10,7 +10,7 @@ import java.util.List;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null,"Bem Vindo ao Sistema Educacional!");
+        JOptionPane.showMessageDialog(null,"Bem Vindo ao Sistema Educacional!"); 
 
         String qtdAlunosString = JOptionPane.showInputDialog(null,"Digite o Total de Alunos para Cadastro");
         int qtdAlunos = Integer.parseInt(qtdAlunosString);
