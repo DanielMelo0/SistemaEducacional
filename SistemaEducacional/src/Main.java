@@ -24,7 +24,7 @@ public class Main {
 
         for (int i = 0; i < qtdAlunos; i++) {
 
-            String nameAluno = JOptionPane.showInputDialog(null, "Digite o Nome do Aluno");
+           /* String nameAluno = JOptionPane.showInputDialog(null, "Digite o Nome do Aluno");
             String idadeAluno = JOptionPane.showInputDialog(null, "Digite a Idade do Aluno");
             String dataNascimento = JOptionPane.showInputDialog(null, "Digite a Data Nascimento do Aluno");
             String rgAluno = JOptionPane.showInputDialog(null, "Digite o Registro Geral do Aluno");
@@ -33,7 +33,7 @@ public class Main {
             String nomePaiAluno = JOptionPane.showInputDialog(null, "Digite o Nome do Pai do Aluno");
             String dataMatricula = JOptionPane.showInputDialog(null, "Digite a Data da Matricula");
             String serie = JOptionPane.showInputDialog(null, "Digite a Serie Matriculada");
-            String nomeEscola = JOptionPane.showInputDialog(null, "Digite o Nome da Instituição de Ensino");
+            String nomeEscola = JOptionPane.showInputDialog(null, "Digite o Nome da Instituição de Ensino");*/
             String nota1 = JOptionPane.showInputDialog(null, "Nota 1");
             String nota2 = JOptionPane.showInputDialog(null, "Nota 2");
             String nota3 = JOptionPane.showInputDialog(null, "Nota 3");
@@ -42,7 +42,7 @@ public class Main {
 
             Aluno aluno1 = new Aluno();
 
-            aluno1.setNome(nameAluno);
+           /* aluno1.setNome(nameAluno);
             aluno1.setIdade(Integer.valueOf(idadeAluno));
             aluno1.setDataNascimento(dataNascimento);
             aluno1.setRegistroGeral(rgAluno);
@@ -51,7 +51,12 @@ public class Main {
             aluno1.setNomePai(nomePaiAluno);
             aluno1.setDataMatricula(dataMatricula);
             aluno1.setSerieMatriculado(serie);
-            aluno1.setNomeEscola(nomeEscola);            
+            aluno1.setNomeEscola(nomeEscola);*/
+            aluno1.setNota1(Double.parseDouble(nota1));
+            aluno1.setNota2(80.8);
+            aluno1.setNota3(70.9);
+            aluno1.setNota4(90.7);
+            
             alunos.add(aluno1);
 
 
@@ -92,6 +97,7 @@ public class Main {
                 System.out.println("Data da Matrícula: " + aluno.getDataMatricula());
                 System.out.println("Série Matriculada: " + aluno.getSerieMatriculado());
                 System.out.println("Nome da Instituição: " + aluno.getNomeEscola());
+                System.out.println("Média Nota: " + aluno.getMediaNota());
                 System.out.println("------------------------------------------------------------------------------------------");
             }
         }else{
