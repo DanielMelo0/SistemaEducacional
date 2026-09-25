@@ -98,6 +98,7 @@ public class Main {
                 System.out.println("Série Matriculada: " + aluno.getSerieMatriculado());
                 System.out.println("Nome da Instituição: " + aluno.getNomeEscola());
                 System.out.println("Média Nota: " + aluno.getMediaNota());
+                System.out.println("Resultado = " + (aluno.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
                 System.out.println("------------------------------------------------------------------------------------------");
             }
         }else{

@@ -120,12 +120,30 @@ public class Aluno extends Pessoa{
     }
     
     public double getMediaNota() {
-    	double media = (nota1 + nota2 + nota3 + nota4) / 4;
-    	
+    	double media = (nota1 + nota2 + nota3 + nota4) / 4;    	
     	return media;
     	
     }
 
+    
+    public boolean getAlunoAprovado(){
+    	double media = this.getMediaNota();
+    	if (media >= 70) {
+    		return true;
+    	} else {
+    		return false;
+    	} 
+    }
+    
+    
+    public String getAlunoAprovado(){
+    	double media = this.getMediaNota();
+    	if (media >= 70) {
+    		return "Aluno está Aprovado";
+    	} else {
+    		return "Aluno está Reprovado";
+    	}
+    }
 
 
 
