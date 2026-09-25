@@ -126,7 +126,14 @@ public class Aluno extends Pessoa{
     }
 
     
-    public boolean getAlunoAprovado(){
+    @Override
+	public String toString() {
+		return "Aluno [dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
+				+ "]";
+	}
+
+	public boolean getAlunoAprovado(){
     	double media = this.getMediaNota();
     	if (media >= 70) {
     		return true;
@@ -136,7 +143,7 @@ public class Aluno extends Pessoa{
     }
     
     
-    public String getAlunoAprovado(){
+    public String getAlunoAprovado2(){
     	double media = this.getMediaNota();
     	if (media >= 70) {
     		return "Aluno está Aprovado";
