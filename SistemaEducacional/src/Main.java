@@ -1,7 +1,6 @@
 import classes.Aluno;
 
 import javax.swing.*;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,9 +33,13 @@ public class Main {
             String dataMatricula = JOptionPane.showInputDialog(null, "Digite a Data da Matricula");
             String serieAluno = JOptionPane.showInputDialog(null, "Digite a Serie Matriculada");
             String nomeEscola = JOptionPane.showInputDialog(null, "Digite o Nome da Instituição de Ensino");
+            String disciplina1 = JOptionPane.showInputDialog(null, "Disciplina 1");
             String nota1 = JOptionPane.showInputDialog(null, "Nota 1");
+            String disciplina2 = JOptionPane.showInputDialog(null, "Disciplina 2");
             String nota2 = JOptionPane.showInputDialog(null, "Nota 2");
+            String disciplina3 = JOptionPane.showInputDialog(null, "Disciplina 3");
             String nota3 = JOptionPane.showInputDialog(null, "Nota 3");
+            String disciplina4 = JOptionPane.showInputDialog(null, "Disciplina 4");
             String nota4 = JOptionPane.showInputDialog(null, "Nota 4");
             
 
@@ -52,10 +55,16 @@ public class Main {
             aluno1.setDataMatricula(dataMatricula);
             aluno1.setSerieMatriculado(serieAluno);
             aluno1.setNomeEscola(nomeEscola);
-            aluno1.setNota1(Double.parseDouble(nota1));
-            aluno1.setNota2(Double.parseDouble(nota2));
-            aluno1.setNota3(Double.parseDouble(nota3));
-            aluno1.setNota4(Double.parseDouble(nota4));
+            
+            aluno1.getDisciplina().setNota1(Double.parseDouble(nota1));
+            aluno1.getDisciplina().setNota2(Double.parseDouble(nota2));
+            aluno1.getDisciplina().setNota3(Double.parseDouble(nota3));
+            aluno1.getDisciplina().setNota4(Double.parseDouble(nota4));
+            
+            aluno1.getDisciplina().setDisciplina1(disciplina1);
+            aluno1.getDisciplina().setDisciplina2(disciplina2);
+            aluno1.getDisciplina().setDisciplina3(disciplina3);
+            aluno1.getDisciplina().setDisciplina4(disciplina4);
             
             alunos.add(aluno1);
 

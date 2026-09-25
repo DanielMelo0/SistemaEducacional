@@ -47,6 +47,7 @@ public class Pessoa{
         return idade >= 18;
     }
 
+    // Equal e Hashcode -> Diferenciação de Objetos 
 	@Override
 	public int hashCode() {
 		return Objects.hash(nome);
