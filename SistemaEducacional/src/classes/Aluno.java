@@ -1,21 +1,24 @@
 package classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aluno extends Pessoa{
     private String dataMatricula;
     private String nomeEscola;
     private String serieMatriculado;
 
 
-    private Disciplina disciplina = new Disciplina();
+    private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
     
-    public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
-	}
+    public void setDisciplinas(List<Disciplina> disciplinas) {
+    	this.disciplinas = disciplinas;
+    }
     
-    public Disciplina getDisciplina() {
-		return disciplina;
-	}
-    
+    public List<Disciplina> getDisciplinas(){
+    	return disciplinas;
+    }
+        
 	public String getNomeEscola() {
         return nomeEscola;
     }
@@ -93,9 +96,8 @@ public class Aluno extends Pessoa{
     }
     
     public double getMediaNota() {
-    	return (disciplina.getNota1() + disciplina.getNota2()+ disciplina.getNota3() + disciplina.getNota4()) / 4;    	
-    	
-    	
+    	return 0;   	 
+    	    	
     }
 
 	public boolean getAlunoAprovado(){
@@ -116,6 +118,12 @@ public class Aluno extends Pessoa{
     		return "Aluno está Reprovado";
     	}
     }
+
+	@Override
+	public String toString() {
+		return "Aluno [dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", disciplinas=" + disciplinas + "]";
+	}
 
 
 

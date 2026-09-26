@@ -7,6 +7,7 @@ import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
         JOptionPane.showMessageDialog(null,"Bem Vindo ao Sistema Educacional!"); 
@@ -17,8 +18,11 @@ public class Main {
 
 
         //Uma lista que Possui chave e Valor que identifica uma sequencia de valores
+        
         HashMap<String,List<Aluno>> maps = new HashMap<>();
+        
         List<Aluno> alunos = new ArrayList<Aluno>();
+        
         String nomeTurma = JOptionPane.showInputDialog(null,"Digite a Turma do Aluno"); 
 
         for (int i = 0; i < qtdAlunos; i++) {
@@ -54,19 +58,9 @@ public class Main {
             aluno1.setNomePai(nomePaiAluno);
             aluno1.setDataMatricula(dataMatricula);
             aluno1.setSerieMatriculado(serieAluno);
-            aluno1.setNomeEscola(nomeEscola);
+            aluno1.setNomeEscola(nomeEscola);         
             
-            aluno1.getDisciplina().setNota1(Double.parseDouble(nota1));
-            aluno1.getDisciplina().setNota2(Double.parseDouble(nota2));
-            aluno1.getDisciplina().setNota3(Double.parseDouble(nota3));
-            aluno1.getDisciplina().setNota4(Double.parseDouble(nota4));
-            
-            aluno1.getDisciplina().setDisciplina1(disciplina1);
-            aluno1.getDisciplina().setDisciplina2(disciplina2);
-            aluno1.getDisciplina().setDisciplina3(disciplina3);
-            aluno1.getDisciplina().setDisciplina4(disciplina4);
-            
-            alunos.add(aluno1);
+            alunos.add(aluno1);  }
 
 
 
@@ -84,14 +78,11 @@ public class Main {
             System.out.println("--------------------------------------------------");*/
 
 
-        }
+      
         maps.put(nomeTurma, alunos);
 
 
-
-
-        // Exibir Alunos da Turma 1
-
+        // Exibir Alunos da Turma 
         List<Aluno> turma1 = maps.get(nomeTurma);
         System.out.println("------------------------- Informações Gerais Alunos da " + nomeTurma + "-------------------------");
         if(turma1 != null){
