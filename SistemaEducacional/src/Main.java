@@ -1,4 +1,5 @@
 import classes.Aluno;
+import classes.Disciplina;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null,"Bem Vindo ao Sistema Educacional!"); 
+        JOptionPane.showMessageDialog(null,"Sistema Educacional - JDev Treinamento"); 
 
         String qtdAlunosString = JOptionPane.showInputDialog(null,"Digite o Total de Alunos para Cadastro");
         int qtdAlunos = Integer.parseInt(qtdAlunosString);
@@ -37,16 +38,22 @@ public class Main {
             String dataMatricula = JOptionPane.showInputDialog(null, "Digite a Data da Matricula");
             String serieAluno = JOptionPane.showInputDialog(null, "Digite a Serie Matriculada");
             String nomeEscola = JOptionPane.showInputDialog(null, "Digite o Nome da Instituição de Ensino");
-            String disciplina1 = JOptionPane.showInputDialog(null, "Disciplina 1");
-            String nota1 = JOptionPane.showInputDialog(null, "Nota 1");
-            String disciplina2 = JOptionPane.showInputDialog(null, "Disciplina 2");
-            String nota2 = JOptionPane.showInputDialog(null, "Nota 2");
-            String disciplina3 = JOptionPane.showInputDialog(null, "Disciplina 3");
-            String nota3 = JOptionPane.showInputDialog(null, "Nota 3");
-            String disciplina4 = JOptionPane.showInputDialog(null, "Disciplina 4");
-            String nota4 = JOptionPane.showInputDialog(null, "Nota 4");
+     
+            
+           /* String disciplina1 = JOptionPane.showInputDialog(null, "Disciplina 1");
+            * String nota1 = JOptionPane.showInputDialog(null, "Nota 1");
+            *String disciplina2 = JOptionPane.showInputDialog(null, "Disciplina 2");
+            *String nota2 = JOptionPane.showInputDialog(null, "Nota 2");
+            *String disciplina3 = JOptionPane.showInputDialog(null, "Disciplina 3");
+            *String nota3 = JOptionPane.showInputDialog(null, "Nota 3");
+            *String disciplina4 = JOptionPane.showInputDialog(null, "Disciplina 4");
+            *String nota4 = JOptionPane.showInputDialog(null, "Nota 4");
+           */
             
 
+          
+            
+            
             Aluno aluno1 = new Aluno();
 
             aluno1.setNome(nameAluno);
@@ -60,23 +67,28 @@ public class Main {
             aluno1.setSerieMatriculado(serieAluno);
             aluno1.setNomeEscola(nomeEscola);         
             
+            Disciplina disciplina1 = new Disciplina();
+            disciplina1.setDisciplina("Banco de Dados");
+            disciplina1.setNota(100);
+                                              
+            Disciplina disciplina2 = new Disciplina();
+            disciplina2.setDisciplina("Java");
+            disciplina2.setNota(100);
+            
+            Disciplina disciplina3 = new Disciplina();
+            disciplina3.setDisciplina("POO");
+            disciplina3.setNota(100);
+            
+            Disciplina disciplina4 = new Disciplina();
+            disciplina4.setDisciplina("Algoritmo");
+            disciplina4.setNota(100);
+            
+            aluno1.getDisciplinas().add(disciplina1);
+            aluno1.getDisciplinas().add(disciplina2);
+            aluno1.getDisciplinas().add(disciplina3);
+            aluno1.getDisciplinas().add(disciplina4);
+            
             alunos.add(aluno1);  }
-
-
-
-            /*Tornar Cadastro de Alunos Dinamicos, Determinando Quantidade */
-/*  
- * 			System.out.println("========================= Informações Gerais Aluno Atual ============================");
-            System.out.println("Nome do Aluno : " + nameAluno);
-            System.out.println("Idade do Aluno :" + idadeAluno);
-            System.out.println("Registro Geral :" + rgAluno );
-            System.out.println("CPF : " + cpfAluno);
-            System.out.println("Nome da Mãe : " + nomeMaeAluno);
-            System.out.println("Nome do Pai : " + nomePaiAluno);
-            System.out.println("Data Matricula : " + dataMatricula );
-            System.out.println("Instituição de Ensino : " + nomeEscola );
-            System.out.println("--------------------------------------------------");*/
-
 
       
         maps.put(nomeTurma, alunos);
@@ -121,7 +133,18 @@ public class Main {
         //  System.out.println("=========================================================================");
 
 
-
+        /*Tornar Cadastro de Alunos Dinamicos, Determinando Quantidade */
+/*  
+* 			System.out.println("========================= Informações Gerais Aluno Atual ============================");
+        System.out.println("Nome do Aluno : " + nameAluno);
+        System.out.println("Idade do Aluno :" + idadeAluno);
+        System.out.println("Registro Geral :" + rgAluno );
+        System.out.println("CPF : " + cpfAluno);
+        System.out.println("Nome da Mãe : " + nomeMaeAluno);
+        System.out.println("Nome do Pai : " + nomePaiAluno);
+        System.out.println("Data Matricula : " + dataMatricula );
+        System.out.println("Instituição de Ensino : " + nomeEscola );
+        System.out.println("--------------------------------------------------");*/
 
 
 
