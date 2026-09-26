@@ -10,146 +10,143 @@ import java.util.List;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 public class Main {
-    public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null,"Sistema Educacional - JDev Treinamento"); 
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null, "Sistema Educacional - JDev Treinamento");
 
-        String qtdAlunosString = JOptionPane.showInputDialog(null,"Digite o Total de Alunos para Cadastro");
-        int qtdAlunos = Integer.parseInt(qtdAlunosString);
+		String qtdAlunosString = JOptionPane.showInputDialog(null, "Digite o Total de Alunos para Cadastro");
+		int qtdAlunos = Integer.parseInt(qtdAlunosString);
 
+		// Uma lista que Possui chave e Valor que identifica uma sequencia de valores
 
+		HashMap<String, List<Aluno>> maps = new HashMap<>();
 
-        //Uma lista que Possui chave e Valor que identifica uma sequencia de valores
-        
-        HashMap<String,List<Aluno>> maps = new HashMap<>();
-        
-        List<Aluno> alunos = new ArrayList<Aluno>();
-        
-        String nomeTurma = JOptionPane.showInputDialog(null,"Digite a Turma do Aluno"); 
+		List<Aluno> alunos = new ArrayList<Aluno>();
 
-        for (int i = 0; i < qtdAlunos; i++) {
+		String nomeTurma = JOptionPane.showInputDialog(null, "Digite a Turma do Aluno");
 
-            String nameAluno = JOptionPane.showInputDialog(null, "Digite o Nome do Aluno");
-            String idadeAluno = JOptionPane.showInputDialog(null, "Digite a Idade do Aluno");
-            String dataNascimento = JOptionPane.showInputDialog(null, "Digite a Data Nascimento do Aluno");
-            String rgAluno = JOptionPane.showInputDialog(null, "Digite o Registro Geral do Aluno");
-            String cpfAluno = JOptionPane.showInputDialog(null, "Digite o Cpf do Aluno");
-            String nomeMaeAluno = JOptionPane.showInputDialog(null, "Digite o Nome da Mãe do Aluno");
-            String nomePaiAluno = JOptionPane.showInputDialog(null, "Digite o Nome do Pai do Aluno");
-            String dataMatricula = JOptionPane.showInputDialog(null, "Digite a Data da Matricula");
-            String serieAluno = JOptionPane.showInputDialog(null, "Digite a Serie Matriculada");
-            String nomeEscola = JOptionPane.showInputDialog(null, "Digite o Nome da Instituição de Ensino");
-     
-            
-           /* String disciplina1 = JOptionPane.showInputDialog(null, "Disciplina 1");
-            * String nota1 = JOptionPane.showInputDialog(null, "Nota 1");
-            *String disciplina2 = JOptionPane.showInputDialog(null, "Disciplina 2");
-            *String nota2 = JOptionPane.showInputDialog(null, "Nota 2");
-            *String disciplina3 = JOptionPane.showInputDialog(null, "Disciplina 3");
-            *String nota3 = JOptionPane.showInputDialog(null, "Nota 3");
-            *String disciplina4 = JOptionPane.showInputDialog(null, "Disciplina 4");
-            *String nota4 = JOptionPane.showInputDialog(null, "Nota 4");
-           */
-            
+		for (int i = 0; i < qtdAlunos; i++) {
 
-          
-            
-            
-            Aluno aluno1 = new Aluno();
+			String nameAluno = JOptionPane.showInputDialog(null, "Digite o Nome do Aluno");
+			String idadeAluno = JOptionPane.showInputDialog(null, "Digite a Idade do Aluno");
+			String dataNascimento = JOptionPane.showInputDialog(null, "Digite a Data Nascimento do Aluno");
+			String rgAluno = JOptionPane.showInputDialog(null, "Digite o Registro Geral do Aluno");
+			String cpfAluno = JOptionPane.showInputDialog(null, "Digite o Cpf do Aluno");
+			String nomeMaeAluno = JOptionPane.showInputDialog(null, "Digite o Nome da Mãe do Aluno");
+			String nomePaiAluno = JOptionPane.showInputDialog(null, "Digite o Nome do Pai do Aluno");
+			String dataMatricula = JOptionPane.showInputDialog(null, "Digite a Data da Matricula");
+			String serieAluno = JOptionPane.showInputDialog(null, "Digite a Serie Matriculada");
+			String nomeEscola = JOptionPane.showInputDialog(null, "Digite o Nome da Instituição de Ensino");
 
-            aluno1.setNome(nameAluno);
-            aluno1.setIdade(Integer.valueOf(idadeAluno));
-            aluno1.setDataNascimento(dataNascimento);
-            aluno1.setRegistroGeral(rgAluno);
-            aluno1.setNumeroCpf(cpfAluno);
-            aluno1.setNomeMae(nomeMaeAluno);
-            aluno1.setNomePai(nomePaiAluno);
-            aluno1.setDataMatricula(dataMatricula);
-            aluno1.setSerieMatriculado(serieAluno);
-            aluno1.setNomeEscola(nomeEscola);         
-            
-            Disciplina disciplina1 = new Disciplina();
-            disciplina1.setDisciplina("Banco de Dados");
-            disciplina1.setNota(100);
-                                              
-            Disciplina disciplina2 = new Disciplina();
-            disciplina2.setDisciplina("Java");
-            disciplina2.setNota(100);
-            
-            Disciplina disciplina3 = new Disciplina();
-            disciplina3.setDisciplina("POO");
-            disciplina3.setNota(100);
-            
-            Disciplina disciplina4 = new Disciplina();
-            disciplina4.setDisciplina("Algoritmo");
-            disciplina4.setNota(100);
-            
-            aluno1.getDisciplinas().add(disciplina1);
-            aluno1.getDisciplinas().add(disciplina2);
-            aluno1.getDisciplinas().add(disciplina3);
-            aluno1.getDisciplinas().add(disciplina4);
-            
-            alunos.add(aluno1);  }
+		
+			
+			Aluno aluno1 = new Aluno();
 
-      
-        maps.put(nomeTurma, alunos);
+			aluno1.setNome(nameAluno);
+			aluno1.setIdade(Integer.valueOf(idadeAluno));
+			aluno1.setDataNascimento(dataNascimento);
+			aluno1.setRegistroGeral(rgAluno);
+			aluno1.setNumeroCpf(cpfAluno);
+			aluno1.setNomeMae(nomeMaeAluno);
+			aluno1.setNomePai(nomePaiAluno);
+			aluno1.setDataMatricula(dataMatricula);
+			aluno1.setSerieMatriculado(serieAluno);
+			aluno1.setNomeEscola(nomeEscola);
+
+			for (int pos = 1; pos <= 4; pos++) {
+
+				String nomeDisciplina = JOptionPane.showInputDialog(null, "Nome da Disciplina " + pos );
+				String notaDisciplina = JOptionPane.showInputDialog(null, "Nota da Disciplina " + pos );
+				
+				Disciplina disciplina = new Disciplina();
+				disciplina.setDisciplina(nomeDisciplina);
+				disciplina.setNota(Double.valueOf(notaDisciplina));
+				
+				aluno1.getDisciplinas().add(disciplina);
+				
+			}
+			
+			int option = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+			
+			// 0 = Yes 1 = No
+			if (option == 0) {
+				
+				System.out.println(aluno1.getDisciplinas().size());
+				
+				String removeDisciplina = JOptionPane.showInputDialog("Qual a Disciplina 1, 2, 3 ou 4?");
+				
+				aluno1.getDisciplinas().remove(Integer.valueOf(removeDisciplina).intValue() - 1);
+				
+				System.out.println(aluno1.getDisciplinas().size());
+			}
+			
+			alunos.add(aluno1);
 
 
-        // Exibir Alunos da Turma 
-        List<Aluno> turma1 = maps.get(nomeTurma);
-        System.out.println("------------------------- Informações Gerais Alunos da " + nomeTurma + "-------------------------");
-        if(turma1 != null){
-            for(Aluno aluno : turma1){
-            	System.out.println(aluno);
-                System.out.println("Nome: " + aluno.getNome());
-                System.out.println("Idade: " + aluno.getIdade());
-                System.out.println("Data de Nascimento: " + aluno.getDataNascimento());
-                System.out.println("Registro Geral: " + aluno.getRegistroGeral());
-                System.out.println("CPF: " + aluno.getNumeroCpf());
-                System.out.println("Nome da Mãe: " + aluno.getNomeMae());
-                System.out.println("Nome do Pai: " + aluno.getNomePai());
-                System.out.println("Data da Matrícula: " + aluno.getDataMatricula());
-                System.out.println("Série Matriculada: " + aluno.getSerieMatriculado());
-                System.out.println("Nome da Instituição: " + aluno.getNomeEscola());
-                System.out.println("Média Nota: " + aluno.getMediaNota());
-                System.out.println("Resultado = " + (aluno.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-                System.out.println("------------------------------------------------------------------------------------------");
-            }
-        }else{
-            System.out.println("Não há alunos na " + nomeTurma);
-        }
+		}
 
+		maps.put(nomeTurma, alunos);
 
-        /* Tornas Cadastro de Disciplinas Dinamicos, Determinando Quantidade */
-/*
-        String nomeDisciplina = JOptionPane.showInputDialog(null,"Digite o Nome da Disciplina");
-        String notaDisciplinaString = JOptionPane.showInputDialog(null, "Digite a Nota da Disciplina : " + nomeDisciplina);
-        double notaDisciplina = (Double.valueOf(notaDisciplinaString));
+		// Exibir Alunos da Turma
+		List<Aluno> turma1 = maps.get(nomeTurma);
+		System.out.println(
+				"------------------------- Informações Gerais Alunos da " + nomeTurma + "-------------------------");
+		if (turma1 != null) {
+			for (Aluno aluno : turma1) {
+				System.out.println(aluno);
+				System.out.println("Nome: " + aluno.getNome());
+				System.out.println("Idade: " + aluno.getIdade());
+				System.out.println("Data de Nascimento: " + aluno.getDataNascimento());
+				System.out.println("Registro Geral: " + aluno.getRegistroGeral());
+				System.out.println("CPF: " + aluno.getNumeroCpf());
+				System.out.println("Nome da Mãe: " + aluno.getNomeMae());
+				System.out.println("Nome do Pai: " + aluno.getNomePai());
+				System.out.println("Data da Matrícula: " + aluno.getDataMatricula());
+				System.out.println("Série Matriculada: " + aluno.getSerieMatriculado());
+				System.out.println("Nome da Instituição: " + aluno.getNomeEscola());
+				System.out.println("Média Nota: " + aluno.getMediaNota());
+				System.out.println("Resultado = " + (aluno.getAlunoAprovado() ? "Aprovado" : "Reprovado"));				
+				System.out.println(
+						"------------------------------------------------------------------------------------------");
+				System.out.println(aluno.getDisciplinas());
+				
+				
+				
+			}
+		} else {
+			System.out.println("Não há alunos na " + nomeTurma);
+		}
 
-        String nomeDisciplina2 = JOptionPane.showInputDialog(null,"Digite o Nome da Disciplina");
-        String notaDisciplinaString2 = JOptionPane.showInputDialog(null, "Digite a Nota da Disciplina : " + nomeDisciplina2);
-        double notaDisciplina2 = (Double.valueOf(notaDisciplinaString2));*/
+		/* Tornas Cadastro de Disciplinas Dinamicos, Determinando Quantidade */
+		/*
+		 * String nomeDisciplina =
+		 * JOptionPane.showInputDialog(null,"Digite o Nome da Disciplina"); String
+		 * notaDisciplinaString = JOptionPane.showInputDialog(null,
+		 * "Digite a Nota da Disciplina : " + nomeDisciplina); double notaDisciplina =
+		 * (Double.valueOf(notaDisciplinaString));
+		 * 
+		 * String nomeDisciplina2 =
+		 * JOptionPane.showInputDialog(null,"Digite o Nome da Disciplina"); String
+		 * notaDisciplinaString2 = JOptionPane.showInputDialog(null,
+		 * "Digite a Nota da Disciplina : " + nomeDisciplina2); double notaDisciplina2 =
+		 * (Double.valueOf(notaDisciplinaString2));
+		 */
 
-        /* Opção de Remover Disciplina Cadastrada */
-        //  System.out.println("=========================================================================");
+		/* Opção de Remover Disciplina Cadastrada */
+		// System.out.println("=========================================================================");
 
+		/* Tornar Cadastro de Alunos Dinamicos, Determinando Quantidade */
+		/*
+		 * System.out.
+		 * println("========================= Informações Gerais Aluno Atual ============================"
+		 * ); System.out.println("Nome do Aluno : " + nameAluno);
+		 * System.out.println("Idade do Aluno :" + idadeAluno);
+		 * System.out.println("Registro Geral :" + rgAluno );
+		 * System.out.println("CPF : " + cpfAluno); System.out.println("Nome da Mãe : "
+		 * + nomeMaeAluno); System.out.println("Nome do Pai : " + nomePaiAluno);
+		 * System.out.println("Data Matricula : " + dataMatricula );
+		 * System.out.println("Instituição de Ensino : " + nomeEscola );
+		 * System.out.println("--------------------------------------------------");
+		 */
 
-        /*Tornar Cadastro de Alunos Dinamicos, Determinando Quantidade */
-/*  
-* 			System.out.println("========================= Informações Gerais Aluno Atual ============================");
-        System.out.println("Nome do Aluno : " + nameAluno);
-        System.out.println("Idade do Aluno :" + idadeAluno);
-        System.out.println("Registro Geral :" + rgAluno );
-        System.out.println("CPF : " + cpfAluno);
-        System.out.println("Nome da Mãe : " + nomeMaeAluno);
-        System.out.println("Nome do Pai : " + nomePaiAluno);
-        System.out.println("Data Matricula : " + dataMatricula );
-        System.out.println("Instituição de Ensino : " + nomeEscola );
-        System.out.println("--------------------------------------------------");*/
-
-
-
-
-
-
-        }
-    }
+	}
+}
